@@ -2,18 +2,6 @@ body {
   background-color: rgb(34, 33, 33);
 }
 /*
-CONTAINERS
-*/
-.main {
-  margin: 20px; /* Отступ со всех сторон */
-}
-.block {
-  padding: 0.5em;
-}
-.container {
-  width: 80%;
-}
-/*
 nav-bar
 */
 .nav-bar {
@@ -33,7 +21,7 @@ nav-bar
 .nav-bar a {
   text-decoration: none;
   color: white;
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(15px, 2vw, 21px);
   font-weight: bold;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -46,6 +34,52 @@ nav-bar
 .nav-bar a:active {
   transform: scale(0.95);
 }
+/*
+CONTAINERS
+*/
+
+.main {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.gray-container {
+  width: 80%;
+  background: #eeeeee;
+  padding: 1.2vh;
+  margin: 10px auto;
+  border-radius: 5vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.carousel-inner {
+  border-radius: 5vh; /* Закругляем весь слайдер */
+  overflow: hidden; /* Обрезаем углы */
+}
+@media (max-width: 768px) {
+  .gray-container {
+    width: 100%;
+  }
+}
+.gray-container:hover {
+  transform: scale(1.02);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 /*
 ELEMENTS
@@ -53,6 +87,7 @@ ELEMENTS
 /*
 btn-orange
 */
+
 .btn-orange {
   background-color: #ec7615;
   color: #eeeeee;
@@ -60,7 +95,9 @@ btn-orange
   border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
+  margin: 0 auto;
   padding: 10px 30px;
+
   transition: background 0.3s ease, transform 0.1s ease;
 }
 
@@ -76,5 +113,16 @@ btn-orange
     width: 100%;
   }
 }
+/*
+img-rounded
+*/
+.img-rounded {
+  border-radius: 5vh;
+}
 
 /*-webkit-text-stroke: 2px #2c2a2a; ОБВОДКА ТЕКСТА*/
+
+/*
+display: flex;
+justify-content: center;  Центрируем по горизонтали 
+*/
